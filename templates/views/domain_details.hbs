@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Domain</title>
+	</head>
+	<body>
+		<p>{{username}}</p>
+		<a href="/domains">Back</a><br>
+		<a href="/domains/traffic_log/{{{domain_id}}}">View Traffic Log</a>
+
+		<p>Backend Servers</p>
+		<table>
+			<thead>
+				<tr>
+					<th>IP Address</th>
+					<th>Port Number</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each server}}
+				<tr>
+					<td>{{this.ip}}</td>
+					<td>{{this.port}}</td>
+					
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</body>
+</html>
+

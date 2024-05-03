@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Domain</title>
+	</head>
+
+	<body>
+		<p>{{username}}</p>
+		<a href="/domains/{{{domain_id}}}">Back</a>
+
+		<p>Traffic Log for {{hostname}}</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Request</th>
+					<th>Request Method</th>
+					<th>IP Address</th>
+					<th>Platform</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each records}}
+				<tr>
+					<td>{{this.date}}</td>
+					<td>{{this.request_protocol}}</td>
+					<td>{{this.request_method}}</td>
+					<td>{{this.ip_address}}</td>
+					<td>{{this.platform}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</body>
+</html>

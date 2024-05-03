@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Domains</title>
+	</head>
+
+	<body>
+		<p>{{username}}'s Domains</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Hostname</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each domain}}
+				<tr>
+					<td>{{this.hostname}}</td>
+					<td>
+						<a href="/domains/{{{this.id}}}">Details</a>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</body>
+</html>
